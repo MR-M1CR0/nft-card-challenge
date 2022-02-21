@@ -1,0 +1,146 @@
+:root {
+  --primary-soft-blue: hsl(215, 51%, 70%);
+  --primary-cyan: hsl(178, 100%, 50%);
+
+  --neutral-very-dark-blue: hsl(217, 54%, 11%);
+  --neutral-dark-blue: hsl(216, 50%, 16%);
+  --neutral-blue: hsl(215, 32%, 27%);
+  --neutral-white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--neutral-very-dark-blue);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.container {
+  max-width: 38.5rem;
+  margin: 0 auto;
+}
+
+.container .card {
+  background-color: var(--neutral-dark-blue);
+  padding: 2rem;
+  border-radius: 18px;
+  color: var(--primary-soft-blue);
+}
+
+.container .card .img-top {
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container .card .img-top img {
+  width: 100%;
+  display: block;
+}
+
+.container .card .img-top .img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  display: none;
+}
+
+.container .card .img-top .img-overlay img {
+  position: absolute;
+  width: 5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .card .img-top:hover .img-overlay {
+  cursor: pointer;
+  display: block;
+}
+
+.container .card .title {
+  font-size: 2.6rem;
+  margin: 2rem 0;
+}
+
+.container .card .title-link {
+  text-decoration: none;
+  color: var(--neutral-white);
+}
+
+.container .card .paragraph {
+  margin-bottom: 2rem;
+}
+
+.container .card .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .card .price .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-cyan);
+}
+
+.container .card .price .left .ethereum-img,
+.container .card .price .right .clock-img {
+  margin-right: 0.75rem;
+}
+
+.container .card .price .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .card .line {
+  height: 1px;
+  border: none;
+  margin: 2rem 0 1.5rem 0;
+  background-color: var(--neutral-blue);
+}
+
+.container .card .creator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.container .card .creator .creator-img {
+  max-width: 15%;
+  border: 2px solid var(--neutral-white);
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+.container .card .creator .creator-name {
+  color: var(--neutral-white);
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+
+.container .card .title-link:hover,
+.container .card .title-link:active,
+.container .card .creator .creator-name:hover,
+.container .card .creator .creator-name:active {
+  color: var(--primary-cyan);
+}
